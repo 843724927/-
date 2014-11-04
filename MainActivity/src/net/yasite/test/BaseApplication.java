@@ -1,20 +1,11 @@
 package net.yasite.test;
-
-import android.R.mipmap;
-import android.annotation.TargetApi;
 import android.app.Application;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.os.Build;
-import android.os.StrictMode;
-
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.cache.memory.impl.UsingFreqLimitedMemoryCache;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
-
 public class BaseApplication extends Application{
 	/**
      * It is possible to keep a static reference across the
@@ -43,14 +34,10 @@ public class BaseApplication extends Application{
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		
-		
-		
 	}
 	public static ImageLoader mImageLoader = ImageLoader.getInstance();
 	public static ImageLoader initImageLoader(Context context){
 		mImageLoader.clearMemoryCache();
 		return mImageLoader;
 	}
-	
 }
