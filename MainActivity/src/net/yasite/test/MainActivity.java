@@ -3,6 +3,7 @@ package net.yasite.test;
 import net.yasite.adapter.GoodListAdapter;
 import net.yasite.adapter.TestAdapter;
 import net.yasite.entity.GoodListEntity;
+import net.yasite.model.DefaultModel;
 import net.yasite.model.GoodModel;
 import net.yasite.net.HandlerHelp;
 import net.yasite.view.XListView;
@@ -101,7 +102,8 @@ public class MainActivity extends BaseNewActivity implements OnXListViewListener
 
 		@Override
 		public void doTask(Message msg) throws Exception {
-			goodList = goodModel.RequestGoodList(pageNumber);
+//			goodList = goodModel.RequestGoodList(pageNumber);
+			new DefaultModel(getApplicationContext()).requestShareEntity("1");
 		}
 
 		@Override
